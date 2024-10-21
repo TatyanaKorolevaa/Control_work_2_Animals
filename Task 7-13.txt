@@ -1,0 +1,89 @@
+mysql> CREATE DATABASE `Друзья_человека`;
+Query OK, 1 row affected (0,01 sec)
+
+mysql> USE `Друзья_человека`;
+Database changed
+mysql> CREATE TABLE Собаки
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,07 sec)
+
+mysql> CREATE TABLE Кошки
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> CREATE TABLE Хомяки
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,07 sec)
+
+mysql> CREATE TABLE Лошади
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> CREATE TABLE Верблюды
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,05 sec)
+
+mysql> CREATE TABLE Ослы
+    -> (
+    ->     id INT,
+    ->     Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE
+    -> );
+Query OK, 0 rows affected (0,04 sec)
+
+mysql> INSERT INTO Кошки (id, Имя, Команды, ДатаРождения)
+    -> VALUES(101,'Myrka', 'jump', date'2022-03-29'), (102,'Izolda', 'sit', date'2023-06-12'), (103,'Myrzik', 'stand up', date'2020-09-01');
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Собаки (id, Имя, Команды, ДатаРождения)
+    -> VALUES(104,'Rich', 'sit', date'2019-03-01'), (105, 'Lord', 'come up', date'2022-10-18'), (106,'Archi', 'give', date'2021-04-20');
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Хомяки (id, Имя, Команды, ДатаРождения)
+    -> VALUES(107,'Homa', 'run', date'2022-09-08'), (108, 'Piter', 'come up', date'2024-02-11'), (109, 'Igor', 'run', date'2024-11-02');
+Query OK, 3 rows affected (0,01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Лошади (id, Имя, Команды, ДатаРождения)
+    -> VALUES(110,'Sky', 'run', date'2019-10-08'), (111, 'Oli', 'come up', date'2018-10-09'), (112, 'Poni', 'escape', date'2022-07-21');
+Query OK, 3 rows affected (0,04 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Верблюды (id, Имя, Команды, ДатаРождения)
+    -> VALUES(113,'Esya', 'trot', date'2020-08-07'), (114, 'Genry', 'come up', date'2021-03-15'), (115, 'Arnold', 'sit', date'2021-08-09'), (116, 'Garry', 'run', date'2019-02-23');
+Query OK, 4 rows affected (0,02 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO Ослы (id, Имя, Команды, ДатаРождения)
+    -> VALUES(117,'Grey', 'run', date'2021-12-31'), (118, 'Arny', 'sit', date'2019-02-28'), (119, 'Motya', 'go', date'2020-11-21');
+Query OK, 3 rows affected (0,04 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
