@@ -154,3 +154,42 @@ mysql> UPDATE `Молодые животные` SET ВозрастПолный =
 Query OK, 5 rows affected (0,03 sec)
 Rows matched: 5  Changed: 5  Warnings: 0
 
+mysql> CREATE TABLE `Все_животные` (
+    -> id INT,
+    -> Имя VARCHAR(45),
+    ->     Команды VARCHAR(45),
+    ->     ДатаРождения DATE,
+    ->     СтараяТаблица ENUM('Кошки','Собаки','Хомяки', 'Лошади', 'Ослы', 'Верблюды')
+    -> );
+Query OK, 0 rows affected (0,06 sec)
+
+mysql> INSERT INTO `Все_животные` (id, Имя, Команды, ДатаРождения, СтараяТаблица)
+    -> SELECT id, Имя, Команды, ДатаРождения, 'Кошки'
+    -> FROM Кошки;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO `Все_животные` (id, Имя, Команды, ДатаРождения, СтараяТаблица)
+    -> SELECT id, Имя, Команды, ДатаРождения, 'Собаки'
+    -> FROM Собаки;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO `Все_животные` (id, Имя, Команды, ДатаРождения, СтараяТаблица)
+    -> SELECT id, Имя, Команды, ДатаРождения, 'Хомяки'
+    -> FROM Хомяки;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO `Все_животные` (id, Имя, Команды, ДатаРождения, СтараяТаблица)
+    -> SELECT id, Имя, Команды, ДатаРождения, 'Лошади'
+    -> FROM Лошади;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> INSERT INTO `Все_животные` (id, Имя, Команды, ДатаРождения, СтараяТаблица)
+    -> SELECT id, Имя, Команды, ДатаРождения, 'Ослы'
+    -> FROM Ослы;
+Query OK, 3 rows affected (0,02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
