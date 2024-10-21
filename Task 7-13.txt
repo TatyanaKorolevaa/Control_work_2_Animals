@@ -105,3 +105,52 @@ mysql> SELECT * FROM Лошади
 +------+--------+----------------+--------------------------+
 6 rows in set (0,00 sec)
 
+mysql> CREATE TABLE `Молодые животные`
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Собаки
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> UNION
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Кошки
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> UNION
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Хомяки
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> UNION
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Лошади
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> UNION
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Верблюды
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> UNION
+    -> SELECT id, Имя, Команды, ДатаРождения,
+    -> (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) AS Возраст
+    -> FROM Ослы
+    -> WHERE (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) < 3
+    -> AND (YEAR(CURRENT_DATE)-YEAR(ДатаРождения)) - (RIGHT(CURRENT_DATE,5)<RIGHT(ДатаРождения,5)) > 1
+    -> ORDER BY id;
+Query OK, 5 rows affected (0,06 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE `Молодые животные` ADD COLUMN ВозрастПолный VARCHAR (30);
+Query OK, 0 rows affected (0,05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE `Молодые животные` SET ВозрастПолный = (CONCAT(TIMESTAMPDIFF(YEAR, ДатаРождения, CURRENT_DATE),' года ',
+    ->     TIMESTAMPDIFF(MONTH, ДатаРождения, CURRENT_DATE) % 12, 'месяцев '));
+Query OK, 5 rows affected (0,03 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
