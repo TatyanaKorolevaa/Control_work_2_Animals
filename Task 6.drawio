@@ -52,31 +52,31 @@
             <mxPoint x="580" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-26" value="&lt;div style=&quot;font-weight: 400; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Class Animals&lt;/span&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-26" value="&lt;div style=&quot;font-weight: 400; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Animals&lt;/span&gt;&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="290" y="130" width="160" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-29" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Class homeAnimals&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-29" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;homeAnimals&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="90" y="280" width="140" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-30" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;Class packedAnimals&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-30" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;packedAnimals&lt;/span&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="500" y="280" width="150" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-32" value="Class Dog" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-32" value="Dog" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="470" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-35" value="Class Cat" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-35" value="Cat" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="110" y="470" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-36" value="Class Hamster" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-36" value="Hamster" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="220" y="470" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-37" value="Class Horse" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-37" value="Horse" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="420" y="470" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-38" value="Class Camel" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-38" value="Camel" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" vertex="1" parent="1">
           <mxGeometry x="530" y="470" width="100" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="9uFnDAk2Y2c-RcscimrC-39" value="Class Donkey" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="9uFnDAk2Y2c-RcscimrC-39" value="Donkey" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="640" y="470" width="100" height="70" as="geometry" />
         </mxCell>
       </root>
